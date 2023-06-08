@@ -1,7 +1,9 @@
 @use "../globals" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Noto+Serif+JP&display=swap");
+
 body {
-  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  font-family: "Montserrat", "Noto Serif JP", sans-serif;
 }
 
 img {
@@ -52,59 +54,69 @@ img {
   }
 }
 
-.purple {
-  color: $cWineRed;
-}
-
-#main-content {
-  position: relative;
-  z-index: 0;
-}
-
 // ------------------------
 // Font Size
 // ------------------------
-.font-sm {
+.font-txt {
   font-size: 14px;
 
-  @include mq(lg) {
+  @include mq(md) {
     font-size: 16px;
   }
 }
-.font-md {
-  font-size: 17px;
 
-  @include mq(lg) {
-    font-size: 19px;
+.font-header2 {
+  font-size: 18px;
+
+  @include mq(md) {
+    font-size: 32px;
   }
 }
-.font-lr {
-  font-size: 17px;
 
-  @include mq(lg) {
-    font-size: 23px;
+.font-header3 {
+  font-size: 18px;
+
+  @include mq(md) {
+    font-size: 20px;
   }
 }
-.font-lg {
-  font-size: 25px;
 
-  @include mq(lg) {
-    font-size: 36px;
+.font-btn {
+  font-size: 16px;
+
+  @include mq(md) {
+    font-size: 18px;
   }
 }
 
 // ------------------------
 // Title
 // ------------------------
-.main-title {
-  @extend .font-lg;
-  font-weight: 600;
-  margin-bottom: 0;
+.h2-title {
+  @extend .font-header2;
   display: block;
+  text-transform: uppercase;
 }
 
-.sub-title {
-  @extend .font-sm;
+.h3-title {
+  @extend .font-header3;
   @extend .mb-sm;
-  color: $cSubTitle;
+}
+
+// ------------------------
+// Button
+// ------------------------
+.btn-brown {
+  color: $font-white;
+  background-color: $bg-primary;
+}
+
+.btn-white {
+  color: $font-black;
+  background-color: $bg-white;
+}
+
+.btn-clear {
+  color: $font-white;
+  background-color: transparent;
 }

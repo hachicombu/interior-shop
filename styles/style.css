@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Noto+Serif+JP&display=swap");
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 1000px;
+  border: none;
+  width: 270px;
+  height: 50px;
+}
+@media screen and (min-width: 600px) {
+  .btn {
+    width: 320px;
+    height: 55px;
+  }
+}
+
+body {
+  font-family: "Montserrat", "Noto Serif JP", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.mb-sm, .h3-title {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+@media screen and (min-width: 960px) {
+  .mb-lg {
+    margin-bottom: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+@media screen and (min-width: 960px) {
+  .pb-lg {
+    padding-bottom: 150px !important;
+  }
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.font-txt {
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  .font-txt {
+    font-size: 16px;
+  }
+}
+
+.font-header2, .h2-title {
+  font-size: 18px;
+}
+@media screen and (min-width: 600px) {
+  .font-header2, .h2-title {
+    font-size: 32px;
+  }
+}
+
+.font-header3, .h3-title {
+  font-size: 18px;
+}
+@media screen and (min-width: 600px) {
+  .font-header3, .h3-title {
+    font-size: 20px;
+  }
+}
+
+.font-btn {
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  .font-btn {
+    font-size: 18px;
+  }
+}
+
+.h2-title {
+  display: block;
+  text-transform: uppercase;
+}
+
+.btn-brown {
+  color: #ffffff;
+  background-color: #504333;
+}
+
+.btn-white {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.btn-clear {
+  color: #ffffff;
+  background-color: transparent;
+}/*# sourceMappingURL=style.css.map */
