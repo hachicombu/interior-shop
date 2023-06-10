@@ -11,7 +11,6 @@
   &__inner {
     position: relative;
     box-sizing: content-box;
-    // max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -20,8 +19,6 @@
     height: 100%;
 
     & > img {
-      // width: 100%;
-      // height: 100%;
       margin: 0 auto;
       object-fit: cover;
     }
@@ -30,13 +27,57 @@
 .swiper {
   padding: 0 3rem;
   overflow: visible;
+  position: relative;
 
-  &-slide {
-    // height: 500px;
-    // overflow: hidden;
+  &-button-prev,
+  &-button-next {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &::after {
+      border-color: $font-white;
+    }
+
+    &::after {
+      width: 11px;
+      height: 11px;
+      content: "";
+      border: solid $font-white;
+      border-width: 2px 2px 0 0;
+    }
   }
 
-  &-wrapper {
-    // transition-timing-function: linear;
+  &-button-prev {
+    left: 2.5%;
+
+    &::after {
+      margin-left: 0.4rem;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &-button-next {
+    right: 2.5%;
+
+    &::after {
+      margin-right: 0.4rem;
+      transform: rotate(45deg);
+    }
   }
 }

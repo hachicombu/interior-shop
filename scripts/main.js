@@ -5,7 +5,6 @@ const swiper = new Swiper(".swiper", {
   speed: 1000,
   autoplay: {
     delay: 4000,
-    // delay: 0,
     disableOnInteraction: false,
   },
 
@@ -32,9 +31,4 @@ const swiper = new Swiper(".swiper", {
       spaceBetween: 32,
     },
   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
 });

@@ -3,7 +3,7 @@
 
 .logo {
   width: 160px;
-  height: 40px;
+  margin: 0 auto;
 
   @include mq(md) {
     width: 240px;
@@ -11,16 +11,17 @@
 }
 .header {
   width: 100%;
-  height: $navHeight;
+  height: 100px;
+
+  @include mq(md) {
+    height: 140px;
+  }
 
   &__inner {
     width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
-  }
-
-  &__logo {
   }
 }
 
@@ -58,15 +59,12 @@
     @extend .mb-md;
   }
 
-  &__title {
-  }
   &__text {
     @extend .font-txt;
     text-align: center;
   }
 
   &__img {
-    // @extend .flex;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -87,13 +85,15 @@
   @extend .pt-md;
   @extend .pb-md;
 
+  &__title {
+    color: $font-primary;
+  }
+
   &__inner {
     @include mq(md) {
       width: 90%;
       max-width: $contentMaxWidth;
       margin: 0 auto;
-
-      // @extend .content-width;
     }
   }
 
@@ -112,7 +112,6 @@
 
   &__texts {
     @extend .font-txt;
-    // text-align: center;
     width: 90%;
     margin: 2em auto;
     @include mq(md) {
@@ -120,7 +119,9 @@
     }
   }
 
-  &__title {
+  &__name {
+    text-align: start;
+    color: $font-black;
   }
   &__text {
     margin-bottom: 18px;
@@ -135,7 +136,6 @@
 }
 
 .insta {
-  // @extend .content-width;
   @extend .mt-md;
   width: 100%;
 
@@ -148,8 +148,6 @@
     width: 90%;
     margin: 0 auto;
     max-width: $contentMaxWidth;
-
-    // @extend .content-width;
   }
 
   &__inner {
@@ -190,4 +188,110 @@
 .sr {
   @extend .pt-md;
   @extend .pb-md;
+  @extend .content-width;
+
+  &__title {
+    color: $font-primary;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 1.3em;
+    overflow: scroll;
+    @extend .mt-md;
+  }
+
+  &__item {
+    width: 90%;
+  }
+
+  &__img {
+    @extend .mb-sm;
+  }
+
+  &__name {
+    letter-spacing: 0.04em;
+    color: $font-black;
+  }
+
+  &__btn {
+    @extend .btn-brown;
+  }
+}
+
+.online {
+  @extend .pt-md;
+  @extend .pb-md;
+  background-image: url(../images/bg-top-online-shop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $font-white;
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    @extend .btn-clear;
+  }
+}
+
+.company {
+  @extend .pt-md;
+
+  font-family: "Noto Serif JP", sans-serif;
+
+  &__inner {
+    text-align: center;
+    @extend .pb-md;
+  }
+
+  &__text {
+    @extend .font-txt;
+    margin: 34px 0;
+  }
+
+  & ul {
+    padding-left: 0;
+  }
+
+  &__sns {
+    letter-spacing: 0.05em;
+    @extend .flex;
+    gap: 0.4em;
+    font-weight: 600;
+    justify-content: center;
+
+    @include mq(md) {
+      gap: 2em;
+    }
+  }
+
+  &__sns-li {
+    & > a {
+      color: $font-base;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 360px;
+
+    & iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-primary;
+  color: $font-white;
+  @extend .pt-sm;
+  @extend .pb-sm;
+
+  &__copy {
+    font-family: "Noto Serif JP", sans-serif;
+    font-size: 12px;
+    text-align: center;
+  }
 }

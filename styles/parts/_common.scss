@@ -5,11 +5,20 @@
 body {
   font-family: "Montserrat", "Noto Serif JP", sans-serif;
   line-height: 1.75;
+  color: $font-base;
 }
 
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+li > a {
+  text-decoration: none;
 }
 
 // ------------------------
@@ -41,6 +50,9 @@ img {
   }
 }
 
+.pt-sm {
+  padding-top: 16px !important;
+}
 .pb-sm {
   padding-bottom: 16px !important;
 }
@@ -152,4 +164,5 @@ img {
 .btn-clear {
   color: $font-white;
   background-color: transparent;
+  border: 1px solid $font-white;
 }
