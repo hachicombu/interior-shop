@@ -26,6 +26,10 @@ li > a {
 // ------------------------
 .mb-sm {
   margin-bottom: 18px !important;
+
+  @include mq(md) {
+    margin-bottom: 40px !important;
+  }
 }
 
 .mt-md {
@@ -89,7 +93,7 @@ li > a {
   display: flex;
   flex-direction: column; // 縦
 
-  @include mq(md) {
+  @include mq(lg) {
     flex-direction: row; // 横並び
     flex-wrap: wrap; // 横並びに入り切らない要素は折り返す
   }
