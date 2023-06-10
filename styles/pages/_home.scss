@@ -83,6 +83,7 @@
 }
 
 .product {
+  background-color: $bg-primary-light;
   @extend .pt-md;
   @extend .pb-md;
 
@@ -131,4 +132,62 @@
   &__btn {
     @extend .btn-brown;
   }
+}
+
+.insta {
+  // @extend .content-width;
+  @extend .mt-md;
+  width: 100%;
+
+  color: $font-white;
+  @extend .pt-md;
+  @extend .pb-md;
+  background-color: $bg-primary;
+
+  @include mq(md) {
+    width: 90%;
+    margin: 0 auto;
+    max-width: $contentMaxWidth;
+
+    // @extend .content-width;
+  }
+
+  &__inner {
+    @extend .flex;
+    justify-content: space-evenly;
+    gap: 1.4em;
+
+    @include mq(md) {
+      gap: 0;
+    }
+
+    align-items: center;
+    line-height: 2;
+  }
+
+  &__title {
+    @include mq(md) {
+      width: 47%;
+    }
+  }
+
+  & h2 span {
+    display: block;
+  }
+
+  &__btn {
+    @extend .btn-white;
+
+    &-cover {
+      @include mq(md) {
+        width: 47%;
+        margin: 2em auto;
+      }
+    }
+  }
+}
+
+.sr {
+  @extend .pt-md;
+  @extend .pb-md;
 }
