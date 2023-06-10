@@ -5,15 +5,15 @@ const swiper = new Swiper(".swiper", {
   speed: 1000,
   autoplay: {
     delay: 4000,
+    // delay: 0,
     disableOnInteraction: false,
   },
 
-  slidePerView: 1,
+  slidesPerView: 1,
   spaceBetween: 24,
   grabCursor: true,
   // 表示状態のスライドに.swiper-slide-visibleがつく
   watchSlidesProgress: true,
-
   pagination: {
     el: ".swiper-pagination",
   },
@@ -25,10 +25,10 @@ const swiper = new Swiper(".swiper", {
   },
   breakpoints: {
     600: {
-      slidePerView: 2,
+      slidesPerView: 2,
     },
-    1024: {
-      slidePerView: 3,
+    960: {
+      slidesPerView: 3,
       spaceBetween: 32,
     },
   },

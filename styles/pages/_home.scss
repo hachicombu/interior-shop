@@ -25,8 +25,110 @@
 }
 
 .concept {
+  position: relative;
+  background-image: url(../images/bg-top-concep.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // &__treeがはみ出るのを防止
+  overflow: hidden;
+  color: $font-white;
+  @extend .pt-md;
+  @extend .pb-md;
+
+  &__tree {
+    position: absolute;
+    width: 40%;
+    bottom: -3%;
+    right: 0;
+
+    @include mq(md) {
+      width: 19%;
+    }
+  }
   &__inner {
     @extend .content-width;
-    @extend .mt-md;
+
+    // &__treeを下にするため
+    position: relative;
+    z-index: 1;
+  }
+
+  &__texts {
+    @extend .mb-md;
+  }
+
+  &__title {
+  }
+  &__text {
+    @extend .font-txt;
+    text-align: center;
+  }
+
+  &__img {
+    // @extend .flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2em;
+  }
+  &__item {
+    margin: 0 auto;
+    width: 43%;
+
+    @include mq(md) {
+      width: 20%;
+    }
+  }
+}
+
+.product {
+  @extend .pt-md;
+  @extend .pb-md;
+
+  &__inner {
+    @include mq(md) {
+      width: 90%;
+      max-width: $contentMaxWidth;
+      margin: 0 auto;
+
+      // @extend .content-width;
+    }
+  }
+
+  &__item {
+    @extend .mb-sm;
+    @extend .flex;
+  }
+
+  &__img {
+    width: 100%;
+
+    @include mq(md) {
+      width: 47%;
+    }
+  }
+
+  &__texts {
+    @extend .font-txt;
+    // text-align: center;
+    width: 90%;
+    margin: 2em auto;
+    @include mq(md) {
+      width: 47%;
+    }
+  }
+
+  &__title {
+  }
+  &__text {
+    margin-bottom: 18px;
+    @include mq(md) {
+      margin-bottom: 43px;
+    }
+  }
+
+  &__btn {
+    @extend .btn-brown;
   }
 }

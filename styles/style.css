@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Noto+Serif+JP&display=swap");
 .btn {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   text-transform: uppercase;
   border-radius: 1000px;
   border: none;
@@ -16,6 +17,7 @@
 
 body {
   font-family: "Montserrat", "Noto Serif JP", sans-serif;
+  line-height: 1.75;
 }
 
 img {
@@ -23,24 +25,24 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm, .h3-title, .h2-title {
-  margin-bottom: 16px !important;
+.mb-sm, .product__item, .h3-title, .h2-title {
+  margin-bottom: 18px !important;
 }
 
-.mt-md, .concept__inner {
+.mt-md {
   margin-top: 64px;
 }
 @media screen and (min-width: 600px) {
-  .mt-md, .concept__inner {
+  .mt-md {
     margin-top: 104px !important;
   }
 }
 
-.mb-md, .hero {
+.mb-md, .concept__texts, .hero {
   margin-bottom: 64px;
 }
 @media screen and (min-width: 600px) {
-  .mb-md, .hero {
+  .mb-md, .concept__texts, .hero {
     margin-bottom: 104px !important;
   }
 }
@@ -58,6 +60,24 @@ img {
   padding-bottom: 16px !important;
 }
 
+.pt-md, .concept, .product {
+  padding-top: 64px;
+}
+@media screen and (min-width: 600px) {
+  .pt-md, .concept, .product {
+    padding-top: 104px !important;
+  }
+}
+
+.pb-md, .concept, .product {
+  padding-bottom: 64px;
+}
+@media screen and (min-width: 600px) {
+  .pb-md, .concept, .product {
+    padding-bottom: 104px !important;
+  }
+}
+
 .pb-lg {
   padding-bottom: 80px !important;
 }
@@ -73,22 +93,22 @@ img {
   max-width: 1080px;
 }
 
-.flex {
+.flex, .product__item {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex {
+  .flex, .product__item {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
-.font-txt {
+.font-txt, .concept__text, .product__texts {
   font-size: 14px;
 }
 @media screen and (min-width: 600px) {
-  .font-txt {
+  .font-txt, .concept__text, .product__texts {
     font-size: 16px;
   }
 }
@@ -124,13 +144,14 @@ img {
   display: block;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.3em;
 }
 
 .h3-title {
   text-align: center;
 }
 
-.btn-brown {
+.btn-brown, .product__btn {
   color: #ffffff;
   background-color: #504333;
 }
@@ -169,12 +190,6 @@ img {
   padding: 0 3rem;
   overflow: visible;
 }
-
-.swiper-slide:not(.swiper-slide-visible) .slide {
-  pointer-events: none;
-  opacity: 0.3;
-}
-
 .logo {
   width: 160px;
   height: 40px;
@@ -194,4 +209,79 @@ img {
   height: 100%;
   display: grid;
   place-items: center;
+}
+.concept {
+  position: relative;
+  background-image: url(../images/bg-top-concep.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  color: #ffffff;
+}
+.concept__tree {
+  position: absolute;
+  width: 40%;
+  bottom: -3%;
+  right: 0;
+}
+@media screen and (min-width: 600px) {
+  .concept__tree {
+    width: 19%;
+  }
+}
+.concept__inner {
+  position: relative;
+  z-index: 1;
+}
+.concept__text {
+  text-align: center;
+}
+.concept__img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2em;
+}
+.concept__item {
+  margin: 0 auto;
+  width: 43%;
+}
+@media screen and (min-width: 600px) {
+  .concept__item {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .product__inner {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+.product__img {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .product__img {
+    width: 47%;
+  }
+}
+.product__texts {
+  width: 90%;
+  margin: 2em auto;
+}
+@media screen and (min-width: 600px) {
+  .product__texts {
+    width: 47%;
+  }
+}
+.product__text {
+  margin-bottom: 18px;
+}
+@media screen and (min-width: 600px) {
+  .product__text {
+    margin-bottom: 43px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@
 
 body {
   font-family: "Montserrat", "Noto Serif JP", sans-serif;
+  line-height: 1.75;
 }
 
 img {
@@ -15,7 +16,7 @@ img {
 // Layout
 // ------------------------
 .mb-sm {
-  margin-bottom: 16px !important;
+  margin-bottom: 18px !important;
 }
 
 .mt-md {
@@ -42,6 +43,20 @@ img {
 
 .pb-sm {
   padding-bottom: 16px !important;
+}
+
+.pt-md {
+  padding-top: 64px;
+  @include mq(md) {
+    padding-top: 104px !important;
+  }
+}
+
+.pb-md {
+  padding-bottom: 64px;
+  @include mq(md) {
+    padding-bottom: 104px !important;
+  }
 }
 
 .pb-lg {
@@ -112,6 +127,7 @@ img {
   @extend .mb-sm;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.3em;
 }
 
 .h3-title {
