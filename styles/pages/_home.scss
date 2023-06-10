@@ -1,2 +1,32 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
+
+.logo {
+  width: 160px;
+  height: 40px;
+
+  @include mq(md) {
+    width: 240px;
+  }
+}
+.header {
+  width: 100%;
+  height: $navHeight;
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  &__logo {
+  }
+}
+
+.concept {
+  &__inner {
+    @extend .content-width;
+    @extend .mt-md;
+  }
+}

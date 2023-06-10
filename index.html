@@ -5,21 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/vendors/css-reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
-        <div class="logo">
+        <div class="logo header__logo">
           <img src="images/logo.svg" alt="logo" />
         </div>
       </div>
     </header>
 
     <!-- hero section -->
-    <div class="hero"></div>
+    <div class="hero">
+      <div class="hero__inner">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="hero__img">
+                <img src="images/pic-top-kv.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__img">
+                <img src="images/pic-top-kv02.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__img">
+                <img src="images/pic-top-kv03.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__img">
+                <img src="images/pic-top-kv04.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__img">
+                <img src="images/pic-top-kv05.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
 
     <main>
       <!-- concept -->

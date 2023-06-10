@@ -18,6 +18,20 @@ img {
   margin-bottom: 16px !important;
 }
 
+.mt-md {
+  margin-top: 64px;
+  @include mq(md) {
+    margin-top: 104px !important;
+  }
+}
+
+.mb-md {
+  margin-bottom: 64px;
+  @include mq(md) {
+    margin-bottom: 104px !important;
+  }
+}
+
 .mb-lg {
   margin-bottom: 80px !important;
 
@@ -95,12 +109,15 @@ img {
 .h2-title {
   @extend .font-header2;
   display: block;
+  @extend .mb-sm;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .h3-title {
   @extend .font-header3;
   @extend .mb-sm;
+  text-align: center;
 }
 
 // ------------------------
