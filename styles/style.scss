@@ -1,3 +1,6 @@
-@use "parts/button"; // buttonアニメーション
-@use "parts/swiper"; // swiperアニメーション
-@use "pages/home"; // トップ画面スタイル（ページ毎に作成）
+@use "parts/base";
+@use "parts/components";
+@use "parts/layouts";
+@use "parts/swiper";
+
+@use "pages/home";

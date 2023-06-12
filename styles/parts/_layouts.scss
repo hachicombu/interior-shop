@@ -1,0 +1,83 @@
+@use "../globals" as *;
+
+// ------------------------
+// Layout > container
+// ------------------------
+.l-container-s,
+.l-container {
+  padding: 0 18px;
+  margin: 0 auto;
+}
+
+.l-container-s {
+  @include mq(lg) {
+    padding: 0;
+    width: $content-width-s;
+  }
+}
+
+.l-container {
+  @include mq(xl) {
+    padding: 0;
+    width: $content-width;
+  }
+}
+
+// ------------------------
+// Layout > section
+// ------------------------
+.l-section {
+  // title上/inner下の余白
+  padding: 64px 0;
+
+  @include mq(md) {
+    padding: 104px 0;
+  }
+
+  &-body {
+    // title,inner間の余白
+    margin-top: 40px;
+
+    @include mq(md) {
+      padding: 80px;
+    }
+  }
+}
+
+// ------------------------
+// Layout > header
+// ------------------------
+.header {
+  margin-top: 40px;
+
+  @include mq(md) {
+    padding: 48px;
+  }
+
+  &-logo {
+    width: 160px;
+    margin: 0 auto;
+
+    @include mq(md) {
+      width: 240px;
+    }
+  }
+}
+
+// ------------------------
+// Layout > footer
+// ------------------------
+.footer {
+  padding: 24px 0;
+  color: $font-white;
+  background-color: $bg-primary;
+
+  &-copyright {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    // bodyでletter-spacing: 0.08emを指定しているため、中央配置の場合はpadding-leftを指定
+    padding-left: 0.08em;
+    line-height: 1;
+  }
+}

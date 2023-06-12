@@ -1,308 +1,308 @@
 @use "../globals" as *;
-@use "../parts/common" as *;
 
-.logo {
-  width: 160px;
-  margin: 0 auto;
+/// ------------------------
+// hero slider
+// ------------------------
 
-  @include mq(md) {
-    width: 240px;
+.hero {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+
+  &-inner {
+    position: relative;
+    box-sizing: content-box;
+    margin: 0 auto;
   }
 }
-.header {
-  width: 100%;
-  height: 100px;
+.swiper {
+  padding: 40px 3rem 64px 3rem;
+  overflow: visible;
+  position: relative;
 
-  @include mq(md) {
-    height: 140px;
-  }
-
-  &__inner {
+  &-img {
     width: 100%;
     height: 100%;
-    display: grid;
-    place-items: center;
+
+    & > img {
+      margin: 0 auto;
+      object-fit: cover;
+    }
   }
-}
 
-.concept {
-  position: relative;
-  background-image: url(../images/bg-top-concep.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // &__treeがはみ出るのを防止
-  overflow: hidden;
-  color: $font-white;
-  @extend .pt-md;
-  @extend .pb-md;
-
-  &__tree {
+  &-button-prev,
+  &-button-next {
     position: absolute;
-    width: 40%;
-    bottom: -3%;
-    right: 0;
-
-    @include mq(md) {
-      width: 19%;
-    }
-  }
-  &__inner {
-    @extend .content-width;
-
-    // &__treeを下にするため
-    position: relative;
     z-index: 1;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+
+    // 矢印の丸部分
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    // 矢印部分
+    &::after {
+      border-color: $font-white;
+    }
+
+    &::after {
+      width: 11px;
+      height: 11px;
+      content: "";
+      border: solid $font-white;
+      border-width: 2px 2px 0 0;
+    }
   }
 
-  &__texts {
-    @extend .mb-md;
+  &-button-prev {
+    left: 2.5%;
+
+    &::after {
+      margin-left: 0.4rem;
+      transform: rotate(-135deg);
+    }
   }
 
-  &__text {
-    @extend .font-txt;
-    text-align: center;
-  }
+  &-button-next {
+    right: 2.5%;
 
-  &__img {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 2em;
-  }
-  &__item {
-    margin: 0 auto;
-    width: 43%;
-
-    @include mq(md) {
-      width: 20%;
+    &::after {
+      margin-right: 0.4rem;
+      transform: rotate(45deg);
     }
   }
 }
 
-.product {
-  background-color: $bg-primary-light;
-  @extend .pt-md;
-  @extend .pb-md;
-
-  &__title {
-    color: $font-primary;
-  }
-
-  &__inner {
-    @include mq(md) {
-      width: 90%;
-      max-width: $contentMaxWidth;
-      margin: 0 auto;
-    }
-  }
-
-  &__item {
-    @extend .mb-sm;
-    display: flex;
-    flex-direction: column;
-
-    @include mq(md) {
-      flex-direction: row;
-    }
-  }
-
-  &__img {
-    width: 100%;
-
-    @include mq(md) {
-      width: 47%;
-    }
-  }
-
-  &__texts {
-    @extend .font-txt;
-    width: 90%;
-    margin: 2em auto;
-
-    @include mq(md) {
-      width: 47%;
-      margin: 0 auto;
-    }
-  }
-
-  &__name {
-    text-align: start;
-    color: $font-black;
-  }
-  &__text {
-    margin-bottom: 18px;
-    @include mq(md) {
-      margin-bottom: 17px;
-    }
-
-    @include mq(lg) {
-      margin-bottom: 43px;
-    }
-  }
-
-  &__btn {
-    @extend .btn-brown;
-  }
-}
-
-.insta {
-  @extend .mt-md;
-  width: 100%;
-
+/// ------------------------
+// Concept
+// ------------------------
+.top-concept {
   color: $font-white;
-  @extend .pt-md;
-  @extend .pb-md;
-  background-color: $bg-primary;
+  // 複数画像設定OK -> 1つ目が上に来る
+  background-image: url(../../images/pic-top-concept-treat.png),
+    url(../../images/bg-top-concept-sp.jpg);
+  background-position: bottom -20px right -50px, center;
+  background-size: 200px, cover;
+  background-repeat: no-repeat, no-repeat;
 
   @include mq(md) {
-    width: 90%;
-    margin: 0 auto;
-    max-width: $contentMaxWidth;
+    background-image: url(../../images/pic-top-concept-treat.png),
+      url(../../images/bg-top-concept.jpg);
+    background-position: bottom -50px right -120px, center;
+    background-size: 446px, cover;
   }
 
-  &__inner {
-    @extend .flex;
-    justify-content: space-evenly;
-    gap: 1.4em;
+  &-copy {
+    font-size: 18px;
+    text-align: center;
+    padding-left: 0.08em;
+    margin-top: 24px;
 
     @include mq(md) {
-      gap: 0;
+      font-size: 30px;
     }
 
-    align-items: center;
-    line-height: 2;
-  }
+    & > span {
+      display: block;
 
-  &__title {
-    @include mq(md) {
-      width: 47%;
-    }
-  }
-
-  & h2 span {
-    display: block;
-  }
-
-  &__btn {
-    @extend .btn-white;
-
-    &-cover {
       @include mq(md) {
-        width: 47%;
-        margin: 2em auto;
+        display: inline-block;
       }
     }
   }
-}
 
-.sr {
-  @extend .pt-md;
-  @extend .pb-md;
-  @extend .content-width;
-
-  &__title {
-    color: $font-primary;
-  }
-
-  &__inner {
-    display: flex;
-    gap: 1.3em;
-    overflow: scroll;
-    @extend .mt-md;
-  }
-
-  &__item {
-    width: 90%;
-  }
-
-  &__img {
-    @extend .mb-sm;
-  }
-
-  &__name {
-    letter-spacing: 0.04em;
-    color: $font-black;
-  }
-
-  &__btn {
-    @extend .btn-brown;
-  }
-}
-
-.online {
-  @extend .pt-md;
-  @extend .pb-md;
-  background-image: url(../images/bg-top-online-shop.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $font-white;
-  display: flex;
-  flex-direction: column;
-
-  &__btn {
-    @extend .btn-clear;
-  }
-}
-
-.company {
-  @extend .pt-md;
-
-  font-family: "Noto Serif JP", sans-serif;
-
-  &__inner {
+  &-text {
+    max-width: 540px;
     text-align: center;
-    @extend .pb-md;
-  }
-
-  &__text {
-    @extend .font-txt;
-    margin: 34px 0;
-  }
-
-  & ul {
-    padding-left: 0;
-  }
-
-  &__sns {
-    letter-spacing: 0.05em;
-    @extend .flex;
-    gap: 0.4em;
-    font-weight: 600;
-    justify-content: center;
+    padding-left: 0.08em;
+    margin: 24px auto 0;
+    line-height: 2;
 
     @include mq(md) {
-      gap: 2em;
+      max-width: 100%;
+      margin: 32px auto 0;
+    }
+
+    & > span {
+      @include mq(md) {
+        display: block;
+      }
     }
   }
 
-  &__sns-li {
-    & > a {
-      color: $font-base;
-    }
-  }
+  &-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    justify-content: center;
+    gap: 24px;
+    margin: 40px auto 0;
 
-  &__map {
-    width: 100%;
-    height: 360px;
-
-    & iframe {
-      width: 100%;
-      height: 100%;
+    @include mq(md) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 60px;
+      margin-top: 140px;
     }
   }
 }
 
-.footer {
-  background-color: $bg-primary;
-  color: $font-white;
-  @extend .pt-sm;
-  @extend .pb-sm;
+/// ------------------------
+// Product
+// ------------------------
+.top-product {
+  background-color: $bg-primary-light;
 
-  &__copy {
-    font-family: "Noto Serif JP", sans-serif;
-    font-size: 12px;
+  &-item {
+    @include mq(md) {
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+    }
+
+    @include mq(lg) {
+      margin: 0 auto;
+      padding: 0;
+      width: $content-width-s;
+    }
+
+    &:not(:first-child) {
+      margin-top: 40px;
+
+      @include mq(md) {
+        margin-top: 64px;
+      }
+    }
+  }
+
+  &-img {
+    @include mq(md) {
+      width: 50%;
+      // 画面サイズによって要素を縮小しない
+      flex-shrink: 0;
+    }
+  }
+
+  &-info {
+    margin-top: 16px;
+    padding: 0 18px;
+
+    @include mq(md) {
+      margin-top: 0;
+      margin-left: 48px;
+      padding: 0;
+    }
+  }
+
+  &-description {
+    margin-top: 16px;
+  }
+
+  &-button {
+    margin-top: 24px;
     text-align: center;
+
+    @include mq(md) {
+      text-align: left;
+    }
+  }
+}
+/// ------------------------
+// Product > instagram
+// ------------------------
+
+.top-product-instagram {
+  margin-top: 64px;
+
+  @include mq(md) {
+    margin-top: 104px;
+  }
+
+  &-inner {
+    color: $font-white;
+    background-color: $bg-primary;
+    padding: 40px 16px;
+
+    @include mq(lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 64px 0;
+    }
+  }
+
+  &-text {
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+    padding-left: 0.08em;
+
+    @include mq(lg) {
+      font-size: 20px;
+      width: 50%;
+      flex-shrink: 0;
+    }
+
+    & > span {
+      display: block;
+    }
+  }
+
+  &-button {
+    margin-top: 32px;
+    text-align: center;
+
+    @include mq(lg) {
+      margin-top: 0;
+      margin-left: 48px;
+      text-align: left;
+      width: 50%;
+    }
+  }
+}
+
+/// ------------------------
+// Product > instagram
+// ------------------------
+.top-showroom {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    gap: 24px;
+    overflow-x: scroll;
+
+    // スクロールバー非表示
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include mq(md) {
+      grid-template-columns: repeat(3, 1fr);
+      overflow-x: visible;
+    }
+
+    @include mq(lg) {
+      gap: 60px;
+    }
+  }
+
+  &-title {
+    margin-top: 16px;
+  }
+
+  &-button {
+    margin-top: 16px;
   }
 }
