@@ -144,12 +144,14 @@
 
   &-gallery {
     display: grid;
+    // 以下は grid-template-columns: 100px 100px; と同じ（1行に100pxのitemを2つ並べる）
     grid-template-columns: repeat(2, 100px);
     justify-content: center;
     gap: 24px;
     margin: 40px auto 0;
 
     @include mq(md) {
+      // 1行に4つのitemを均等（1fr）に並べる
       grid-template-columns: repeat(4, 1fr);
       gap: 60px;
       margin-top: 140px;
@@ -277,6 +279,7 @@
 .top-showroom {
   &-list {
     display: grid;
+    // 1行に260pxのitemを3つ並べる
     grid-template-columns: repeat(3, 260px);
     gap: 24px;
     overflow-x: scroll;
@@ -289,6 +292,7 @@
     }
 
     @include mq(md) {
+      // 1行に均等（1fr）に3つのitemを並べる
       grid-template-columns: repeat(3, 1fr);
       overflow-x: visible;
     }
