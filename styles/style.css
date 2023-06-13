@@ -27,6 +27,10 @@ a {
   color: inherit;
 }
 
+ul {
+  padding-left: 0;
+}
+
 .c-button {
   width: 100%;
   max-width: 270px;
@@ -448,4 +452,82 @@ a {
 .top-online-shop-button {
   margin-top: 24px;
   text-align: center;
+}
+
+.top-company {
+  padding-top: 64px;
+}
+@media screen and (min-width: 768px) {
+  .top-company {
+    padding-top: 104px;
+  }
+}
+.top-company-logo {
+  width: 160px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .top-company-logo {
+    width: 240px;
+  }
+}
+.top-company-info {
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .top-company-info {
+    margin-top: 48px;
+  }
+}
+.top-company-info > span {
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  display: block;
+  padding-left: 0.08em;
+}
+@media screen and (min-width: 768px) {
+  .top-company-info > span {
+    font-size: 14px;
+  }
+}
+.top-company-sns {
+  margin-top: 32px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .top-company-sns {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    gap: 16px;
+    text-align: center;
+  }
+}
+.top-company-sns-item > a {
+  color: #504333;
+  letter-spacing: 0.1em;
+  padding-left: 0.1em;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .top-company-sns-item > a {
+    font-size: 18px;
+  }
+}
+.top-company-map {
+  aspect-ratio: 360/190;
+  margin-top: 64px;
+}
+@media screen and (min-width: 768px) {
+  .top-company-map {
+    aspect-ratio: 1366/360;
+    margin-top: 104px;
+  }
+}
+.top-company-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
