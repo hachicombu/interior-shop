@@ -23,43 +23,48 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__inner">
-        <div class="logo header__logo">
-          <img src="images/logo.svg" alt="logo" />
-        </div>
-      </div>
+      <h1 class="header-logo">
+        <a href="">
+          <img
+            width="240"
+            height="60"
+            src="images/logo.svg"
+            alt="interior shop migliore"
+          />
+        </a>
+      </h1>
     </header>
 
     <!-- hero section -->
     <div class="hero">
-      <div class="hero__inner">
+      <div class="hero-inner">
         <!-- Slider main container -->
         <div class="swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <div class="hero__img">
+              <div class="swiper-img">
                 <img src="images/pic-top-kv.jpg" alt="" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="hero__img">
+              <div class="swiper-img">
                 <img src="images/pic-top-kv02.jpg" alt="" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="hero__img">
+              <div class="swiper-img">
                 <img src="images/pic-top-kv03.jpg" alt="" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="hero__img">
+              <div class="swiper-img">
                 <img src="images/pic-top-kv04.jpg" alt="" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="hero__img">
+              <div class="swiper-img">
                 <img src="images/pic-top-kv05.jpg" alt="" />
               </div>
             </div>
@@ -71,179 +76,341 @@
     </div>
 
     <main>
-      <!-- concept -->
-      <section class="concept">
-        <div class="concept__tree">
-          <img src="images/pic-top-concept-treat.png" alt="" />
-        </div>
-        <h2 class="h2-title">Concept</h2>
-        <div class="concept__inner">
-          <div class="concept__texts">
-            <h3 class="concept__title h3-title">
-              ディテールにこだわったクオリティファースト
-            </h3>
-            <div class="concept__text">
-              <p>
-                親譲りの無鉄砲で小供の時から損ばかりしている。
-                小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
-                なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
-                新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び。
-              </p>
-            </div>
-          </div>
+      <!-- top-concept -->
+      <section class="top-concept l-section">
+        <div class="l-container">
+          <h2
+            class="c-title-level2 c-title-level2--center c-title-level2--white"
+          >
+            concept
+          </h2>
+          <p class="top-concept-copy">
+            <span>ディテールにこだわった</span><span>クオリティファースト</span>
+          </p>
 
-          <div class="concept__img">
-            <div class="concept__item">
-              <img src="images/pic-top-concept-gallery.jpg" alt="" />
+          <p class="top-concept-text">
+            <span>親譲りの無鉄砲で小供の時から損ばかりしている。</span
+            ><span
+              >小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。</span
+            ><span
+              >なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</span
+            ><span
+              >新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び。</span
+            >
+          </p>
+          <div class="top-concept-gallery">
+            <div>
+              <img
+                width="450"
+                height="450"
+                src="images/pic-top-concept-gallery.jpg"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
             </div>
-            <div class="concept__item">
-              <img src="images/pic-top-concept-gallery02.jpg" alt="" />
-            </div>
-            <div class="concept__item">
-              <img src="images/pic-top-concept-gallery03.jpg" alt="" />
-            </div>
-            <div class="concept__item">
-              <img src="images/pic-top-concept-gallery04.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- product -->
-      <section class="product">
-        <h2 class="h2-title product__title">Product</h2>
-        <div class="product__inner">
-          <div class="product__item">
-            <div class="product__img">
-              <img src="images/pic-product.jpg" alt="" />
+            <div>
+              <img
+                width="450"
+                height="450"
+                src="images/pic-top-concept-gallery02.jpg"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
             </div>
-            <div class="product__texts">
-              <h3 class="product__name h3-title">イージーチェア</h3>
-              <p class="product__text">
-                親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
-              </p>
-              <button class="btn product__btn">View more</button>
-            </div>
-          </div>
 
-          <div class="product__item">
-            <div class="product__img">
-              <img src="images/pic-product02.jpg" alt="" />
+            <div>
+              <img
+                width="450"
+                height="450"
+                src="images/pic-top-concept-gallery03.jpg"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
             </div>
-            <div class="product__texts">
-              <h3 class="product__name h3-title">シーリングライト</h3>
-              <p class="product__text">
-                親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
-              </p>
-              <button class="btn product__btn">View more</button>
-            </div>
-          </div>
 
-          <div class="product__item">
-            <div class="product__img">
-              <img src="images/pic-product03.jpg" alt="" />
-            </div>
-            <div class="product__texts">
-              <h3 class="product__name h3-title">リラックスチェア</h3>
-              <p class="product__text">
-                親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
-              </p>
-              <button class="btn product__btn">View more</button>
-            </div>
-          </div>
-
-          <div class="product__item">
-            <div class="product__img">
-              <img src="images/pic-product04.jpg" alt="" />
-            </div>
-            <div class="product__texts">
-              <h3 class="product__name h3-title">フロアソファ</h3>
-              <p class="product__text">
-                親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
-              </p>
-              <button class="btn product__btn">View more</button>
-            </div>
-          </div>
-        </div>
-        <!-- instagram -->
-        <div class="insta">
-          <div class="insta__inner">
-            <h2 class="h3-title insta__title">
-              <span>インスタグラムでも</span
-              ><span>商品の紹介をしています。</span>
-            </h2>
-            <div class="insta__btn-cover">
-              <button class="btn insta__btn">view instagram</button>
+            <div>
+              <img
+                width="450"
+                height="450"
+                src="images/pic-top-concept-gallery04.jpg"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
       </section>
+      <!-- end top-concept -->
+
+      <!-- top-product -->
+      <section class="top-product l-section">
+        <div class="l-container-s">
+          <h2 class="c-title-level2 c-title-level2--center">product</h2>
+        </div>
+        <div class="l-section-body">
+          <div class="top-product-list">
+            <section class="top-product-item">
+              <div class="top-product-img">
+                <img
+                  width="920"
+                  height="560"
+                  src="images/pic-product.jpg"
+                  alt="オレンジ色でアンティーク柄のイージーチェア"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              <div class="top-product-info">
+                <h3 class="c-title-level3">イージーチェア</h3>
+                <p class="top-product-description">
+                  親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
+                </p>
+
+                <div class="top-product-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="top-product-item">
+              <div class="top-product-img">
+                <img
+                  width="920"
+                  height="560"
+                  src="images/pic-product02.jpg"
+                  alt="オレンジ色でアンティーク柄のイージーチェア"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              <div class="top-product-info">
+                <h3 class="c-title-level3">イージーチェア</h3>
+                <p class="top-product-description">
+                  親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
+                </p>
+
+                <div class="top-product-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="top-product-item">
+              <div class="top-product-img">
+                <img
+                  width="920"
+                  height="560"
+                  src="images/pic-product03.jpg"
+                  alt="オレンジ色でアンティーク柄のイージーチェア"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              <div class="top-product-info">
+                <h3 class="c-title-level3">イージーチェア</h3>
+                <p class="top-product-description">
+                  親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
+                </p>
+
+                <div class="top-product-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="top-product-item">
+              <div class="top-product-img">
+                <img
+                  width="920"
+                  height="560"
+                  src="images/pic-product04.jpg"
+                  alt="オレンジ色でアンティーク柄のイージーチェア"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              <div class="top-product-info">
+                <h3 class="c-title-level3">イージーチェア</h3>
+                <p class="top-product-description">
+                  親譲りの無鉄砲で小供の時から損ばかりしているよ。小学校に居る時分学校の二階から。
+                </p>
+
+                <div class="top-product-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- instagram -->
+          <div class="top-product-instagram">
+            <div class="l-container-s">
+              <div class="top-product-instagram-inner">
+                <p class="top-product-instagram-text">
+                  <span>インスタグラムでも</span
+                  ><span>商品の紹介をしています。</span>
+                </p>
+                <div class="top-product-instagram-button">
+                  <a
+                    href=""
+                    class="c-button c-button--white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >view instagram</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end top-product -->
 
       <!-- showroom -->
-      <section class="sr">
-        <h2 class="h2-title sr__title">Showroom</h2>
-        <div class="sr__inner">
-          <div class="sr__item">
-            <div class="sr__img">
-              <img src="images/pic-top-showroom-shinjuku.jpg" alt="新宿店" />
-            </div>
-            <div class="sr__texts">
-              <h2 class="h3-title sr__name">新宿店</h2>
-              <button class="btn sr__btn">view more</button>
-            </div>
-          </div>
+      <section class="top-showroom l-section">
+        <div class="l-container">
+          <h2 class="c-title-level2 c-title-level2--center">showroom</h2>
+          <div class="l-section-body">
+            <div class="top-showroom-list">
+              <section>
+                <div class="top-showroom-img">
+                  <img
+                    width="640"
+                    height="422"
+                    src="images/pic-top-showroom-shinjuku.jpg"
+                    alt="新宿店"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="top-showroom-title">
+                  <h3 class="c-title-level3 c-title-level3--center">新宿店</h3>
+                </div>
+                <div class="top-showroom-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </section>
 
-          <div class="sr__item">
-            <div class="sr__img">
-              <img src="images/pic-top-showroom-shibuya.jpg" alt="渋谷店" />
-            </div>
-            <div class="sr__texts">
-              <h2 class="h3-title sr__name">渋谷店</h2>
-              <button class="btn sr__btn">view more</button>
-            </div>
-          </div>
+              <section>
+                <div class="top-showroom-img">
+                  <img
+                    width="640"
+                    height="422"
+                    src="images/pic-top-showroom-shibuya.jpg"
+                    alt="渋谷店"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="top-showroom-title">
+                  <h3 class="c-title-level3 c-title-level3--center">渋谷店</h3>
+                </div>
+                <div class="top-showroom-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </section>
 
-          <div class="sr__item">
-            <div class="sr__img">
-              <img src="images/pic-top-showroom-ginza.jpg" alt="銀座店" />
-            </div>
-            <div class="sr__texts">
-              <h2 class="h3-title sr__name">銀座店</h2>
-              <button class="btn sr__btn">view more</button>
+              <section>
+                <div class="top-showroom-img">
+                  <img
+                    width="640"
+                    height="422"
+                    src="images/pic-top-showroom-ginza.jpg"
+                    alt="銀座店"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="top-showroom-title">
+                  <h3 class="c-title-level3 c-title-level3--center">銀座店</h3>
+                </div>
+                <div class="top-showroom-button">
+                  <a href="" class="c-button">view more</a>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- online shop -->
-      <section class="online">
-        <h2 class="h2-title">online shop</h2>
-        <button class="btn online__btn">view shop</button>
+      <!-- online-shop -->
+      <section class="top-online-shop">
+        <div class="l-container">
+          <h2
+            class="c-title-level2 c-title-level2--center c-title-level2--white"
+          >
+            online shop
+          </h2>
+          <div class="top-online-shop-button">
+            <a
+              href="https://google.com"
+              class="c-button c-button--transparent"
+              target="_blank"
+              rel="noopener noreferrer"
+              >view shop</a
+            >
+          </div>
+        </div>
       </section>
+      <!-- end online-shop -->
 
-      <!-- company -->
-      <section class="company">
-        <div class="company__inner">
-          <div class="logo">
-            <img src="images/logo.svg" alt="logo" />
+      <!-- top-company -->
+      <section class="top-company">
+        <div class="l-container">
+          <div class="top-company-logo">
+            <img
+              width="240"
+              height="60"
+              src="images/logo.svg"
+              alt="interior shop migliore"
+              decoding="async"
+              loading="lazy"
+            />
           </div>
 
-          <div class="company__text">
-            <ul>
-              <li class="company__li">株式会社MIGLIORE</li>
-              <li class="company__li">〒012-3456 東京都渋谷区ABC</li>
-              <li class="company__li">TEL012-345-6789</li>
-            </ul>
+          <div class="top-company-info">
+            <span>株式会社MIGLIORE</span>
+            <span>〒012-3456 東京都渋谷区ABC</span>
+            <span>TEL 012-345-6789</span>
           </div>
 
-          <ul class="company__sns">
-            <li class="company__sns-li"><a href="">Twitter</a></li>
-            <li class="company__sns-li"><a href="">Instagram</a></li>
-            <li class="company__sns-li"><a href="">Facebook</a></li>
+          <ul class="top-company-sns">
+            <li class="top-company-sns-item">
+              <a
+                href="http://google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter
+              </a>
+            </li>
+            <li class="top-company-sns-item">
+              <a
+                href="http://google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+            <li class="top-company-sns-item">
+              <a
+                href="http://google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
 
-        <div class="company__map">
+        <div class="top-company-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2431157342407!2d139.6929929259191!3d35.671015322590534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb479620a33%3A0x34bcc78ce7f8bf3e!2sYoyogi%20Park!5e0!3m2!1sen!2sjp!4v1686223822785!5m2!1sen!2sjp"
             style="border: 0"
@@ -253,9 +420,13 @@
           ></iframe>
         </div>
       </section>
+      <!-- end top-company -->
+
       <!-- footer -->
       <footer class="footer">
-        <p class="footer__copy">&copy; 2023 MIGLIORE, inc.</p>
+        <div class="l-container">
+          <small class="footer-copyright">&copy; 2023 MIGLIORE, inc.</small>
+        </div>
       </footer>
     </main>
   </body>

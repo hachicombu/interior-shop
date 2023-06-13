@@ -1,0 +1,87 @@
+@use "../globals" as *;
+
+/// ------------------------
+// Component > button
+// ------------------------
+
+.c-button {
+  width: 100%;
+  max-width: 270px;
+  height: 50px;
+  color: $font-white;
+  background-color: $bg-primary;
+  font-family: $font-family-en;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 100vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1em;
+  // 左側にletter-space分の余白を追加 -> 中央配置
+  padding: 0 16px 0 calc(16px + 0.1em);
+  text-transform: uppercase;
+
+  @include mq(md) {
+    max-width: 320px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  // カラー（白）
+  &--white {
+    background-color: $bg-white;
+    color: $font-primary;
+  }
+
+  // カラー（透明）
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $border-white;
+  }
+}
+
+/// ------------------------
+// Component > title
+// ------------------------
+// h2
+.c-title-level2 {
+  color: $font-primary;
+  font-family: $font-family-en;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+
+  @include mq(md) {
+    font-size: 32px;
+  }
+
+  // center
+  &--center {
+    text-align: center;
+    padding-left: 0.4em;
+  }
+
+  // カラー（白）
+  &--white {
+    color: $font-white;
+  }
+}
+
+// h3
+.c-title-level3 {
+  color: $font-black;
+  font-size: 18px;
+
+  @include mq(md) {
+    font-size: 20px;
+  }
+
+  // center
+  &--center {
+    text-align: center;
+    padding-left: 0.08em;
+  }
+}
