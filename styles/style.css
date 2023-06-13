@@ -431,4 +431,21 @@ a {
 }
 .top-showroom-button {
   margin-top: 16px;
+}
+
+.top-online-shop {
+  background-image: url(../images/bg-top-online-shop-sp.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 64px 0;
+}
+@media screen and (min-width: 768px) {
+  .top-online-shop {
+    background-image: url(../images/bg-top-online-shop.jpg);
+    padding: 64px 0;
+  }
+}
+.top-online-shop-button {
+  margin-top: 24px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

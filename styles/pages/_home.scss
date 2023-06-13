@@ -306,3 +306,31 @@
     margin-top: 16px;
   }
 }
+
+/// ------------------------
+// Online shop
+// ------------------------
+.top-online-shop {
+  background-image: url(../images/bg-top-online-shop-sp.jpg);
+
+  // ※cssで画像自体に半透明のレイヤーを載せる方法
+  // background-image: linear-gradient(
+  //     rgba(80, 67, 51, 0.75),
+  //     rgba(80, 67, 51, 0.75)
+  //   ),
+  //   url(../img/bg-top-online-shop-sp.jpg);
+
+  background-position: center;
+  background-size: cover;
+  padding: 64px 0;
+
+  @include mq(md) {
+    background-image: url(../images/bg-top-online-shop.jpg);
+    padding: 64px 0;
+  }
+
+  &-button {
+    margin-top: 24px;
+    text-align: center;
+  }
+}
